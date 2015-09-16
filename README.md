@@ -16,11 +16,11 @@ For example, with the Cray compiler:
 
     make COMPILER=cray
 
-This will create a folder called `bin/cray/` with 3 versions of the program.
+This will create a folder called `bin/cray/` with 3 vectorised and non vectorised versions of the program.
 
-+ `tsvc_relaxed` - 'relaxed' math flags. This specifies that the compiler can make any kind of floating point optimisations it thinks will speed it up
-+ `tsvc_precise` - 'precise' math flags. This specifies that some optimisations such as reordering operations that may affect the result are not allowed.
-+ `tsvc_default` - 'default' math flags. This is the compiler default.
++ `tsvc_[no]vec_relaxed` - 'relaxed' math flags. This specifies that the compiler can make any kind of floating point optimisations it thinks will speed it up
++ `tsvc_[no]vec_precise` - 'precise' math flags. This specifies that some optimisations such as reordering operations that may affect the result are not allowed.
++ `tsvc_[no]vec_default` - 'default' math flags. This is the compiler default.
 
 Some compilers (GNU, clang) do not have a 'precise' flag, and the PGI compiler will ignore the IEEE math flag with vectorisation enabled.
 
