@@ -2582,6 +2582,8 @@ real_t s13110(struct args_t * func_args)
             for (int j = 0; j < LEN_2D; j++) {
                 if (aa[i][j] > max) {
                     max = aa[i][j];
+                    xindex = i;
+                    yindex = j;
                 }
             }
         }
