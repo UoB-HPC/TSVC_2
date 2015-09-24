@@ -44,16 +44,6 @@ __attribute__((aligned(ARRAY_ALIGNMENT))) int indx[LEN_1D];
 real_t* __restrict__ xx;
 real_t* yy;
 
-int s471s(void)
-{
-// --  dummy subroutine call made in s471
-    return 0;
-}
-
-real_t f(real_t a, real_t b){
-    return a*b;
-}
-
 real_t s000(struct args_t * func_args)
 {
 
@@ -3334,6 +3324,12 @@ real_t s453(struct args_t * func_args)
 
 // %4.7
 
+int s471s(void)
+{
+// --  dummy subroutine call made in s471
+    return 0;
+}
+
 real_t s471(struct args_t * func_args){
 
 //    call statements
@@ -3600,6 +3596,10 @@ real_t s4117(struct args_t * func_args)
 }
 
 // %4.12
+
+real_t f(real_t a, real_t b){
+    return a*b;
+}
 
 real_t s4121(struct args_t * func_args)
 {
