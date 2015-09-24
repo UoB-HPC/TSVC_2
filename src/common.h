@@ -1,8 +1,8 @@
 #ifndef TSVC_COMMON_HDR
 #define TSVC_COMMON_HDR
 
-#define iterations 10000
-#define LEN_1D 3200
+#define iterations 100000
+#define LEN_1D 32000
 #define LEN_2D 256
 
 #include <sys/time.h>
