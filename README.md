@@ -1,12 +1,12 @@
 # TSVC 2
 
-Updated version of TSVC to capture the same information but hopefully in a better format to make it easier to add things.
+Updated version of TSVC to capture the same information but hopefully in a better format to make it easier to add things. We've fixed a few bugs along the way too.
 
 The original paper which laid out the details of the suite and provided results (D. Callahan, J. Dongarra, and D. Levine. Vectorizing compilers: a test suite and results. Proceedings. Supercomputing ’88) originally had the loops in Fortran.
 
-The C version of the benchmark used as a base for this one was found [here](http://polaris.cs.uiuc.edu/~maleki1/TSVC.tar.gz), which had some problems to do with compilers being able to inline all of the initialisation and checksum loops, which wildly skews the results and the timing. There are also some bugs with writing off the end of arrays and some of the initialisation routines seem to not initialise the right arrays. 
+The C version of the benchmark used as a base for TSVC-2 was found [here](http://polaris.cs.uiuc.edu/~maleki1/TSVC.tar.gz). The old C version had some problems to do with compilers being able to inline all of the initialisation and checksum loops, which wildly skews the results and the timing. There are also some bugs with writing off the end of arrays and some of the initialisation routines seem to not initialise the right arrays. 
 
-This version should (hopefully) be free of bugs and should stop the compiler from being able to eliminate code.
+This version should (hopefully) be free(er) of bugs and should stop the compiler from being able to completely eliminate code.
 
 ## Compiling
 
@@ -37,3 +37,4 @@ Link time optimisation flags are also not enabled as a necessity for this benchm
 
 Fortran compilers and some Fortran specific flags, as well as flags to enable or disable OpenMP for each compiler are provided with the hope that these makefiles would be useful for other purposes.
 
+If you find any issues or have any requests, please let us know!
