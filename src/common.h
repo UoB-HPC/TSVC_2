@@ -28,4 +28,6 @@ void init(int** ip, real_t* s1, real_t* s2);
 int initialise_arrays(const char* name);
 real_t calc_checksum(const char * name);
 
+typedef real_t(*test_function_t)(struct args_t *);
+
 #endif
