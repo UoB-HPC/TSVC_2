@@ -4,7 +4,10 @@ Updated version of TSVC to capture the same information but hopefully in a bette
 
 The original paper which laid out the details of the suite and provided results (D. Callahan, J. Dongarra, and D. Levine. Vectorizing compilers: a test suite and results. Proceedings. Supercomputing ’88) originally had the loops in Fortran.
 
-The C version of the benchmark used as a base for TSVC-2 was found [here](http://polaris.cs.uiuc.edu/~maleki1/TSVC.tar.gz). The old C version had some problems to do with compilers being able to inline all of the initialisation and checksum loops, which wildly skews the results and the timing. There are also some bugs with writing off the end of arrays and some of the initialisation routines seem to not initialise the right arrays. 
+The C version of the benchmark used as a base for TSVC-2 can be found in the Wayback Machine [here][a.org] ([original][tgz] location). The old C version had some problems to do with compilers being able to inline all of the initialisation and checksum loops, which wildly skews the results and the timing. There are also some bugs with writing off the end of arrays and some of the initialisation routines seem to not initialise the right arrays.
+
+[a.org]: https://web.archive.org/web/20221006233720/http://polaris.cs.uiuc.edu/~maleki1/TSVC.tar.gz
+[tgz]: http://polaris.cs.uiuc.edu/~maleki1/TSVC.tar.gz
 
 This version should (hopefully) be free(er) of bugs and should stop the compiler from being able to completely eliminate code.
 
