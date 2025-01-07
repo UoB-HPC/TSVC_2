@@ -10,6 +10,8 @@ This version should (hopefully) be free(er) of bugs and should stop the compiler
 
 ## Compiling
 
+There are two ways to build, one is using "make" as mentioned below  and that will create a single binary for all the kernels. Other was using the build.sh and that will create binary for each kenrel. Both methods will create the same folder structure as mentioned below.
+
 There are a few supplied makefiles for each compiler so just typing `make` along with specifying the compiler should work. The flags in these makefiles are generally used flags such as `-O3`, with some compilers having a few extra flags which help a lot with vectorisation.
 
 For example, with the Cray compiler:

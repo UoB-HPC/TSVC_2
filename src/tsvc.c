@@ -44,6 +44,7 @@ __attribute__((aligned(ARRAY_ALIGNMENT))) int indx[LEN_1D];
 real_t* __restrict__ xx;
 real_t* yy;
 
+#if defined(S000) || defined(ALL_KERNEL)
 real_t s000(struct args_t * func_args)
 {
 
@@ -63,8 +64,11 @@ real_t s000(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %1.1
+#if defined(S111) || defined(ALL_KERNEL)
 real_t s111(struct args_t * func_args)
 {
 
@@ -84,7 +88,11 @@ real_t s111(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
 
+
+
+#if defined(S1111) || defined(ALL_KERNEL)
 real_t s1111(struct args_t * func_args)
 {
 
@@ -104,9 +112,13 @@ real_t s1111(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
+
 
 // %1.1
 
+#if defined(S112) || defined(ALL_KERNEL)
 real_t s112(struct args_t * func_args)
 {
 
@@ -126,7 +138,11 @@ real_t s112(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
 
+
+
+#if defined(S1112) || defined(ALL_KERNEL)
 real_t s1112(struct args_t * func_args)
 {
 
@@ -146,9 +162,13 @@ real_t s1112(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
+
 
 // %1.1
 
+#if defined(S113) || defined(ALL_KERNEL)
 real_t s113(struct args_t * func_args)
 {
 
@@ -168,7 +188,11 @@ real_t s113(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
 
+
+
+#if defined(S1113) || defined(ALL_KERNEL)
 real_t s1113(struct args_t * func_args)
 {
 
@@ -188,9 +212,13 @@ real_t s1113(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
+
 
 // %1.1
 
+#if defined(S114) || defined(ALL_KERNEL)
 real_t s114(struct args_t * func_args)
 {
 
@@ -213,9 +241,13 @@ real_t s114(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
+
 
 // %1.1
 
+#if defined(S115) || defined(ALL_KERNEL)
 real_t s115(struct args_t * func_args)
 {
 
@@ -237,7 +269,11 @@ real_t s115(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
 
+
+
+#if defined(S1115) || defined(ALL_KERNEL)
 real_t s1115(struct args_t * func_args)
 {
 
@@ -259,9 +295,13 @@ real_t s1115(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
+
 
 // %1.1
 
+#if defined(S116) || defined(ALL_KERNEL)
 real_t s116(struct args_t * func_args)
 {
 
@@ -284,9 +324,13 @@ real_t s116(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
+
 
 // %1.1
 
+#if defined(S118) || defined(ALL_KERNEL)
 real_t s118(struct args_t * func_args)
 {
 
@@ -308,9 +352,13 @@ real_t s118(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
+
 
 // %1.1
 
+#if defined(S119) || defined(ALL_KERNEL)
 real_t s119(struct args_t * func_args)
 {
 
@@ -332,7 +380,11 @@ real_t s119(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
 
+
+
+#if defined(S1119) || defined(ALL_KERNEL)
 real_t s1119(struct args_t * func_args)
 {
 
@@ -354,9 +406,13 @@ real_t s1119(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
+
 
 // %1.2
 
+#if defined(S121) || defined(ALL_KERNEL)
 real_t s121(struct args_t * func_args)
 {
 
@@ -378,9 +434,13 @@ real_t s121(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
+
 
 // %1.2
 
+#if defined(S122) || defined(ALL_KERNEL)
 real_t s122(struct args_t * func_args)
 {
 
@@ -409,9 +469,13 @@ real_t s122(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
+
 
 // %1.2
 
+#if defined(S123) || defined(ALL_KERNEL)
 real_t s123(struct args_t * func_args)
 {
 
@@ -439,9 +503,13 @@ real_t s123(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
+
 
 // %1.2
 
+#if defined(S124) || defined(ALL_KERNEL)
 real_t s124(struct args_t * func_args)
 {
 
@@ -469,8 +537,11 @@ real_t s124(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %1.2
+#if defined(S125) || defined(ALL_KERNEL)
 real_t s125(struct args_t * func_args)
 {
 
@@ -495,8 +566,12 @@ real_t s125(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
+
 
 // %1.2
+#if defined(S126) || defined(ALL_KERNEL)
 real_t s126(struct args_t * func_args)
 {
 
@@ -522,9 +597,13 @@ real_t s126(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
+
 
 // %1.2
 
+#if defined(S127) || defined(ALL_KERNEL)
 real_t s127(struct args_t * func_args)
 {
 
@@ -549,9 +628,13 @@ real_t s127(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
+
 
 // %1.2
 
+#if defined(S128) || defined(ALL_KERNEL)
 real_t s128(struct args_t * func_args)
 {
 
@@ -577,9 +660,13 @@ real_t s128(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
+
 
 // %1.3
 
+#if defined(S131) || defined(ALL_KERNEL)
 real_t s131(struct args_t * func_args)
 {
 //    global data flow analysis
@@ -599,9 +686,13 @@ real_t s131(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
+
 
 // %1.3
 
+#if defined(S132) || defined(ALL_KERNEL)
 real_t s132(struct args_t * func_args)
 {
 //    global data flow analysis
@@ -623,9 +714,13 @@ real_t s132(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
+
 
 // %1.4
 
+#if defined(S141) || defined(ALL_KERNEL)
 real_t s141(struct args_t * func_args)
 {
 
@@ -651,8 +746,11 @@ real_t s141(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %1.5
+
 
 void s151s(real_t a[LEN_1D], real_t b[LEN_1D],  int m)
 {
@@ -661,6 +759,7 @@ void s151s(real_t a[LEN_1D], real_t b[LEN_1D],  int m)
     }
 }
 
+#if defined(S151) || defined(ALL_KERNEL)
 real_t s151(struct args_t * func_args)
 {
 
@@ -678,6 +777,8 @@ real_t s151(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %1.5
 
@@ -686,6 +787,7 @@ void s152s(real_t a[LEN_1D], real_t b[LEN_1D], real_t c[LEN_1D], int i)
     a[i] += b[i] * c[i];
 }
 
+#if defined(S152) || defined(ALL_KERNEL)
 real_t s152(struct args_t * func_args)
 {
 
@@ -706,9 +808,12 @@ real_t s152(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %1.6
 
+#if defined(S161) || defined(ALL_KERNEL)
 real_t s161(struct args_t * func_args)
 {
 
@@ -737,7 +842,10 @@ L10:
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
 
+
+#if defined(S1161) || defined(ALL_KERNEL)
 real_t s1161(struct args_t * func_args)
 {
 
@@ -766,10 +874,13 @@ L10:
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %1.6
 
 //int s162(int k)
+#if defined(S162) || defined(ALL_KERNEL)
 real_t s162(struct args_t * func_args)
 {
 //    control flow
@@ -792,10 +903,13 @@ real_t s162(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %1.7
 
 //int s171(int inc)
+#if defined(S171) || defined(ALL_KERNEL)
 real_t s171(struct args_t * func_args)
 {
 
@@ -817,10 +931,13 @@ real_t s171(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %1.7
 
 //int s172( int n1, int n3)
+#if defined(S172) || defined(ALL_KERNEL)
 real_t s172(struct args_t * func_args)
 {
 //    symbolics
@@ -843,9 +960,12 @@ real_t s172(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %1.7
 
+#if defined(S173) || defined(ALL_KERNEL)
 real_t s173(struct args_t * func_args)
 {
 //    symbolics
@@ -865,10 +985,13 @@ real_t s173(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %1.7
 
 //int s174(int M)
+#if defined(S174) || defined(ALL_KERNEL)
 real_t s174(struct args_t * func_args)
 {
 
@@ -890,10 +1013,13 @@ real_t s174(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %1.7
 
 //int s175(int inc)
+#if defined(S175) || defined(ALL_KERNEL)
 real_t s175(struct args_t * func_args)
 {
 
@@ -915,9 +1041,12 @@ real_t s175(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %1.7
 
+#if defined(S176) || defined(ALL_KERNEL)
 real_t s176(struct args_t * func_args)
 {
 
@@ -940,6 +1069,8 @@ real_t s176(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // **********************************************************
 // *                                *
@@ -949,6 +1080,7 @@ real_t s176(struct args_t * func_args)
 
 // %2.1
 
+#if defined(S211) || defined(ALL_KERNEL)
 real_t s211(struct args_t * func_args)
 {
 
@@ -969,9 +1101,12 @@ real_t s211(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.1
 
+#if defined(S212) || defined(ALL_KERNEL)
 real_t s212(struct args_t * func_args)
 {
 
@@ -992,7 +1127,10 @@ real_t s212(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
 
+
+#if defined(S1213) || defined(ALL_KERNEL)
 real_t s1213(struct args_t * func_args)
 {
 
@@ -1013,9 +1151,12 @@ real_t s1213(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.2
 
+#if defined(S221) || defined(ALL_KERNEL)
 real_t s221(struct args_t * func_args)
 {
 
@@ -1036,7 +1177,10 @@ real_t s221(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
 
+
+#if defined(S1221) || defined(ALL_KERNEL)
 real_t s1221(struct args_t * func_args)
 {
 
@@ -1055,9 +1199,12 @@ real_t s1221(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.2
 
+#if defined(S222) || defined(ALL_KERNEL)
 real_t s222(struct args_t * func_args)
 {
 
@@ -1079,9 +1226,12 @@ real_t s222(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.3
 
+#if defined(S231) || defined(ALL_KERNEL)
 real_t s231(struct args_t * func_args)
 {
 //    loop interchange
@@ -1102,9 +1252,12 @@ real_t s231(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.3
 
+#if defined(S232) || defined(ALL_KERNEL)
 real_t s232(struct args_t * func_args)
 {
 
@@ -1126,7 +1279,10 @@ real_t s232(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
 
+
+#if defined(S1232) || defined(ALL_KERNEL)
 real_t s1232(struct args_t * func_args)
 {
 
@@ -1148,9 +1304,12 @@ real_t s1232(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.3
 
+#if defined(S233) || defined(ALL_KERNEL)
 real_t s233(struct args_t * func_args)
 {
 
@@ -1175,7 +1334,10 @@ real_t s233(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
 
+
+#if defined(S2233) || defined(ALL_KERNEL)
 real_t s2233(struct args_t * func_args)
 {
 
@@ -1200,8 +1362,11 @@ real_t s2233(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.3
+#if defined(S235) || defined(ALL_KERNEL)
 real_t s235(struct args_t * func_args)
 {
 
@@ -1224,9 +1389,12 @@ real_t s235(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.4
 
+#if defined(S241) || defined(ALL_KERNEL)
 real_t s241(struct args_t * func_args)
 {
 
@@ -1247,10 +1415,13 @@ real_t s241(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.4
 
 //int s242(real_t s1, real_t s2)
+#if defined(S242) || defined(ALL_KERNEL)
 real_t s242(struct args_t * func_args)
 {
 
@@ -1273,9 +1444,12 @@ real_t s242(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.4
 
+#if defined(S243) || defined(ALL_KERNEL)
 real_t s243(struct args_t * func_args)
 {
 
@@ -1297,9 +1471,12 @@ real_t s243(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.4
 
+#if defined(S244) || defined(ALL_KERNEL)
 real_t s244(struct args_t * func_args)
 {
 
@@ -1321,7 +1498,10 @@ real_t s244(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
 
+
+#if defined(S1244) || defined(ALL_KERNEL)
 real_t s1244(struct args_t * func_args)
 {
 
@@ -1342,7 +1522,10 @@ real_t s1244(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
 
+
+#if defined(S2244) || defined(ALL_KERNEL)
 real_t s2244(struct args_t * func_args)
 {
 
@@ -1363,9 +1546,12 @@ real_t s2244(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.5
 
+#if defined(S251) || defined(ALL_KERNEL)
 real_t s251(struct args_t * func_args)
 {
 
@@ -1387,7 +1573,10 @@ real_t s251(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
 
+
+#if defined(S1251) || defined(ALL_KERNEL)
 real_t s1251(struct args_t * func_args)
 {
 
@@ -1410,7 +1599,10 @@ real_t s1251(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
 
+
+#if defined(S2251) || defined(ALL_KERNEL)
 real_t s2251(struct args_t * func_args)
 {
 
@@ -1433,7 +1625,10 @@ real_t s2251(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
 
+
+#if defined(S3251) || defined(ALL_KERNEL)
 real_t s3251(struct args_t * func_args)
 {
 
@@ -1455,9 +1650,12 @@ real_t s3251(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.5
 
+#if defined(S252) || defined(ALL_KERNEL)
 real_t s252(struct args_t * func_args)
 {
 
@@ -1481,9 +1679,12 @@ real_t s252(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.5
 
+#if defined(S253) || defined(ALL_KERNEL)
 real_t s253(struct args_t * func_args)
 {
 
@@ -1508,9 +1709,12 @@ real_t s253(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.5
 
+#if defined(S254) || defined(ALL_KERNEL)
 real_t s254(struct args_t * func_args)
 {
 
@@ -1533,9 +1737,12 @@ real_t s254(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.5
 
+#if defined(S255) || defined(ALL_KERNEL)
 real_t s255(struct args_t * func_args)
 {
 
@@ -1560,9 +1767,12 @@ real_t s255(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.5
 
+#if defined(S256) || defined(ALL_KERNEL)
 real_t s256(struct args_t * func_args)
 {
 
@@ -1585,9 +1795,12 @@ real_t s256(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.5
 
+#if defined(S257) || defined(ALL_KERNEL)
 real_t s257(struct args_t * func_args)
 {
 
@@ -1610,7 +1823,10 @@ real_t s257(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
 
+
+#if defined(S258) || defined(ALL_KERNEL)
 real_t s258(struct args_t * func_args)
 {
 
@@ -1636,9 +1852,12 @@ real_t s258(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.7
 
+#if defined(S261) || defined(ALL_KERNEL)
 real_t s261(struct args_t * func_args)
 {
 
@@ -1662,7 +1881,10 @@ real_t s261(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
 
+
+#if defined(S271) || defined(ALL_KERNEL)
 real_t s271(struct args_t * func_args)
 {
 
@@ -1684,10 +1906,13 @@ real_t s271(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.7
 
 //int s272(real_t t)
+#if defined(S272) || defined(ALL_KERNEL)
 real_t s272(struct args_t * func_args)
 {
 
@@ -1712,9 +1937,12 @@ real_t s272(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.7
 
+#if defined(S273) || defined(ALL_KERNEL)
 real_t s273(struct args_t * func_args)
 {
 
@@ -1737,9 +1965,12 @@ real_t s273(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.7
 
+#if defined(S274) || defined(ALL_KERNEL)
 real_t s274(struct args_t * func_args)
 {
 
@@ -1764,9 +1995,12 @@ real_t s274(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.7
 
+#if defined(S275) || defined(ALL_KERNEL)
 real_t s275(struct args_t * func_args)
 {
 
@@ -1790,7 +2024,10 @@ real_t s275(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
 
+
+#if defined(S2275) || defined(ALL_KERNEL)
 real_t s2275(struct args_t * func_args)
 {
 
@@ -1812,9 +2049,12 @@ real_t s2275(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.7
 
+#if defined(S276) || defined(ALL_KERNEL)
 real_t s276(struct args_t * func_args)
 {
 
@@ -1839,8 +2079,11 @@ real_t s276(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.7
+#if defined(S277) || defined(ALL_KERNEL)
 real_t s277(struct args_t * func_args)
 {
 
@@ -1870,9 +2113,12 @@ L20:
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.7
 
+#if defined(S278) || defined(ALL_KERNEL)
 real_t s278(struct args_t * func_args)
 {
 
@@ -1900,9 +2146,12 @@ L30:
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.7
 
+#if defined(S279) || defined(ALL_KERNEL)
 real_t s279(struct args_t * func_args)
 {
 
@@ -1934,7 +2183,10 @@ L30:
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
 
+
+#if defined(S1279) || defined(ALL_KERNEL)
 real_t s1279(struct args_t * func_args)
 {
 
@@ -1958,10 +2210,13 @@ real_t s1279(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.7
 
 //int s2710( real_t x)
+#if defined(S2710) || defined(ALL_KERNEL)
 real_t s2710(struct args_t * func_args)
 {
 
@@ -1997,9 +2252,12 @@ real_t s2710(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.7
 
+#if defined(S2711) || defined(ALL_KERNEL)
 real_t s2711(struct args_t * func_args)
 {
 
@@ -2021,9 +2279,12 @@ real_t s2711(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.7
 
+#if defined(S2712) || defined(ALL_KERNEL)
 real_t s2712(struct args_t * func_args)
 {
 
@@ -2045,9 +2306,12 @@ real_t s2712(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.8
 
+#if defined(S281) || defined(ALL_KERNEL)
 real_t s281(struct args_t * func_args)
 {
 
@@ -2071,7 +2335,10 @@ real_t s281(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
 
+
+#if defined(S1281) || defined(ALL_KERNEL)
 real_t s1281(struct args_t * func_args)
 {
 
@@ -2095,9 +2362,12 @@ real_t s1281(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.9
 
+#if defined(S291) || defined(ALL_KERNEL)
 real_t s291(struct args_t * func_args)
 {
 
@@ -2120,9 +2390,12 @@ real_t s291(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.9
 
+#if defined(S292) || defined(ALL_KERNEL)
 real_t s292(struct args_t * func_args)
 {
 
@@ -2148,9 +2421,12 @@ real_t s292(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.9
 
+#if defined(S293) || defined(ALL_KERNEL)
 real_t s293(struct args_t * func_args)
 {
 
@@ -2170,9 +2446,12 @@ real_t s293(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.10
 
+#if defined(S2101) || defined(ALL_KERNEL)
 real_t s2101(struct args_t * func_args)
 {
 
@@ -2193,9 +2472,12 @@ real_t s2101(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.12
 
+#if defined(S2102) || defined(ALL_KERNEL)
 real_t s2102(struct args_t * func_args)
 {
 
@@ -2218,9 +2500,12 @@ real_t s2102(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %2.11
 
+#if defined(S2111) || defined(ALL_KERNEL)
 real_t s2111(struct args_t * func_args)
 {
 
@@ -2241,6 +2526,8 @@ real_t s2111(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // **********************************************************
 //                                *
@@ -2250,6 +2537,7 @@ real_t s2111(struct args_t * func_args)
 
 // %3.1
 
+#if defined(S311) || defined(ALL_KERNEL)
 real_t s311(struct args_t * func_args)
 {
 
@@ -2271,6 +2559,8 @@ real_t s311(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 real_t test(real_t* A){
   real_t s = (real_t)0.0;
@@ -2279,6 +2569,8 @@ real_t test(real_t* A){
   return s;
 }
 
+
+#if defined(S31111) || defined(ALL_KERNEL)
 real_t s31111(struct args_t * func_args)
 {
 
@@ -2305,9 +2597,12 @@ real_t s31111(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %3.1
 
+#if defined(S312) || defined(ALL_KERNEL)
 real_t s312(struct args_t * func_args)
 {
 
@@ -2329,8 +2624,11 @@ real_t s312(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return prod;
 }
+#endif
+
 
 // %3.1
+#if defined(S313) || defined(ALL_KERNEL)
 real_t s313(struct args_t * func_args)
 {
 
@@ -2352,9 +2650,12 @@ real_t s313(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return dot;
 }
+#endif
+
 
 // %3.1
 
+#if defined(S314) || defined(ALL_KERNEL)
 real_t s314(struct args_t * func_args)
 {
 
@@ -2378,9 +2679,12 @@ real_t s314(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return x;
 }
+#endif
+
 
 // %3.1
 
+#if defined(S315) || defined(ALL_KERNEL)
 real_t s315(struct args_t * func_args)
 {
 
@@ -2411,9 +2715,12 @@ real_t s315(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return index + x + 1;
 }
+#endif
+
 
 // %3.1
 
+#if defined(S316) || defined(ALL_KERNEL)
 real_t s316(struct args_t * func_args)
 {
 
@@ -2437,8 +2744,11 @@ real_t s316(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return x;
 }
+#endif
+
 // %3.1
 
+#if defined(S317) || defined(ALL_KERNEL)
 real_t s317(struct args_t * func_args)
 {
 
@@ -2462,10 +2772,13 @@ real_t s317(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return q;
 }
+#endif
+
 
 // %3.1
 
 //int s318( int inc)
+#if defined(S318) || defined(ALL_KERNEL)
 real_t s318(struct args_t * func_args)
 {
 
@@ -2500,9 +2813,12 @@ L5:
     gettimeofday(&func_args->t2, NULL);
     return max + index + 1;
 }
+#endif
+
 
 // %3.1
 
+#if defined(S319) || defined(ALL_KERNEL)
 real_t s319(struct args_t * func_args)
 {
 
@@ -2527,9 +2843,12 @@ real_t s319(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return sum;
 }
+#endif
+
 
 // %3.1
 
+#if defined(S3110) || defined(ALL_KERNEL)
 real_t s3110(struct args_t * func_args)
 {
 
@@ -2562,7 +2881,10 @@ real_t s3110(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return max + xindex+1 + yindex+1;
 }
+#endif
 
+
+#if defined(S13110) || defined(ALL_KERNEL)
 real_t s13110(struct args_t * func_args)
 {
 
@@ -2594,9 +2916,12 @@ real_t s13110(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return max + xindex+1 + yindex+1;
 }
+#endif
+
 
 // %3.1
 
+#if defined(S3111) || defined(ALL_KERNEL)
 real_t s3111(struct args_t * func_args)
 {
 
@@ -2620,9 +2945,12 @@ real_t s3111(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return sum;
 }
+#endif
+
 
 // %3.1
 
+#if defined(S3112) || defined(ALL_KERNEL)
 real_t s3112(struct args_t * func_args)
 {
 
@@ -2645,9 +2973,12 @@ real_t s3112(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return sum;
 }
+#endif
+
 
 // %3.1
 
+#if defined(S3113) || defined(ALL_KERNEL)
 real_t s3113(struct args_t * func_args)
 {
 
@@ -2671,9 +3002,12 @@ real_t s3113(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return max;
 }
+#endif
+
 
 // %3.2
 
+#if defined(S321) || defined(ALL_KERNEL)
 real_t s321(struct args_t * func_args)
 {
 
@@ -2693,9 +3027,12 @@ real_t s321(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %3.2
 
+#if defined(S322) || defined(ALL_KERNEL)
 real_t s322(struct args_t * func_args)
 {
 
@@ -2715,9 +3052,12 @@ real_t s322(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %3.2
 
+#if defined(S323) || defined(ALL_KERNEL)
 real_t s323(struct args_t * func_args)
 {
 
@@ -2738,9 +3078,12 @@ real_t s323(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %3.3
 
+#if defined(S331) || defined(ALL_KERNEL)
 real_t s331(struct args_t * func_args)
 {
 
@@ -2766,9 +3109,12 @@ real_t s331(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return j+1;
 }
+#endif
+
 
 // %3.3
 //int s332( real_t t)
+#if defined(S332) || defined(ALL_KERNEL)
 real_t s332(struct args_t * func_args)
 {
 
@@ -2801,9 +3147,12 @@ L20:
     gettimeofday(&func_args->t2, NULL);
     return value;
 }
+#endif
+
 
 // %3.4
 
+#if defined(S341) || defined(ALL_KERNEL)
 real_t s341(struct args_t * func_args)
 {
 
@@ -2829,9 +3178,12 @@ real_t s341(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %3.4
 
+#if defined(S342) || defined(ALL_KERNEL)
 real_t s342(struct args_t * func_args)
 {
 
@@ -2857,9 +3209,12 @@ real_t s342(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %3.4
 
+#if defined(S343) || defined(ALL_KERNEL)
 real_t s343(struct args_t * func_args)
 {
 
@@ -2887,9 +3242,12 @@ real_t s343(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %3.5
 
+#if defined(S351) || defined(ALL_KERNEL)
 real_t s351(struct args_t * func_args)
 {
 
@@ -2914,7 +3272,10 @@ real_t s351(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
 
+
+#if defined(S1351) || defined(ALL_KERNEL)
 real_t s1351(struct args_t * func_args)
 {
 
@@ -2939,9 +3300,12 @@ real_t s1351(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %3.5
 
+#if defined(S352) || defined(ALL_KERNEL)
 real_t s352(struct args_t * func_args)
 {
 
@@ -2964,10 +3328,13 @@ real_t s352(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return dot;
 }
+#endif
+
 
 // %3.5
 
 //int s353(int* __restrict__ ip)
+#if defined(S353) || defined(ALL_KERNEL)
 real_t s353(struct args_t * func_args)
 {
 
@@ -2995,6 +3362,8 @@ real_t s353(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // **********************************************************
 //                                *
@@ -3005,6 +3374,7 @@ real_t s353(struct args_t * func_args)
 // %4.1
 // %4.2
 
+#if defined(S421) || defined(ALL_KERNEL)
 real_t s421(struct args_t * func_args)
 {
 
@@ -3027,7 +3397,10 @@ real_t s421(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
 
+
+#if defined(S1421) || defined(ALL_KERNEL)
 real_t s1421(struct args_t * func_args)
 {
 
@@ -3049,9 +3422,12 @@ real_t s1421(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %4.2
 
+#if defined(S422) || defined(ALL_KERNEL)
 real_t s422(struct args_t * func_args)
 {
 
@@ -3074,9 +3450,12 @@ real_t s422(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %4.2
 
+#if defined(S423) || defined(ALL_KERNEL)
 real_t s423(struct args_t * func_args)
 {
 
@@ -3100,9 +3479,12 @@ real_t s423(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %4.2
 
+#if defined(S424) || defined(ALL_KERNEL)
 real_t s424(struct args_t * func_args)
 {
 
@@ -3127,9 +3509,12 @@ real_t s424(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %4.3
 
+#if defined(S431) || defined(ALL_KERNEL)
 real_t s431(struct args_t * func_args)
 {
 
@@ -3153,9 +3538,12 @@ real_t s431(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %4.4
 
+#if defined(S441) || defined(ALL_KERNEL)
 real_t s441(struct args_t * func_args)
 {
 
@@ -3181,9 +3569,12 @@ real_t s441(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %4.4
 
+#if defined(S442) || defined(ALL_KERNEL)
 real_t s442(struct args_t * func_args)
 {
 
@@ -3221,9 +3612,12 @@ L50:
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %4.4
 
+#if defined(S443) || defined(ALL_KERNEL)
 real_t s443(struct args_t * func_args)
 {
 
@@ -3254,9 +3648,12 @@ L50:
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %4.5
 
+#if defined(S451) || defined(ALL_KERNEL)
 real_t s451(struct args_t * func_args)
 {
 
@@ -3276,9 +3673,12 @@ real_t s451(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %4.5
 
+#if defined(S452) || defined(ALL_KERNEL)
 real_t s452(struct args_t * func_args)
 {
 
@@ -3298,9 +3698,12 @@ real_t s452(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %4.5
 
+#if defined(S453) || defined(ALL_KERNEL)
 real_t s453(struct args_t * func_args)
 {
 
@@ -3323,6 +3726,8 @@ real_t s453(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %4.7
 
@@ -3332,6 +3737,7 @@ int s471s(void)
     return 0;
 }
 
+#if defined(S471) || defined(ALL_KERNEL)
 real_t s471(struct args_t * func_args){
 
 //    call statements
@@ -3353,9 +3759,12 @@ real_t s471(struct args_t * func_args){
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %4.8
 
+#if defined(S481) || defined(ALL_KERNEL)
 real_t s481(struct args_t * func_args)
 {
 
@@ -3378,10 +3787,13 @@ real_t s481(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %4.8
 
 // %4.8
+#if defined(S482) || defined(ALL_KERNEL)
 real_t s482(struct args_t * func_args)
 {
 
@@ -3402,10 +3814,13 @@ real_t s482(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %4.9
 
 //int s491(int* __restrict__ ip)
+#if defined(S491) || defined(ALL_KERNEL)
 real_t s491(struct args_t * func_args)
 {
 
@@ -3428,10 +3843,13 @@ real_t s491(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %4.11
 
 //int s4112(int* __restrict__ ip, real_t s)
+#if defined(S4112) || defined(ALL_KERNEL)
 real_t s4112(struct args_t * func_args)
 {
 
@@ -3456,10 +3874,13 @@ real_t s4112(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %4.11
 
 //int s4113(int* __restrict__ ip)
+#if defined(S4113) || defined(ALL_KERNEL)
 real_t s4113(struct args_t * func_args)
 {
 
@@ -3482,10 +3903,13 @@ real_t s4113(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %4.11
 
 //int s4114(int* ip, int n1)
+#if defined(S4114) || defined(ALL_KERNEL)
 real_t s4114(struct args_t * func_args)
 {
 
@@ -3513,10 +3937,13 @@ real_t s4114(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %4.11
 
 //int s4115(int* __restrict__ ip)
+#if defined(S4115) || defined(ALL_KERNEL)
 real_t s4115(struct args_t * func_args)
 {
 
@@ -3541,10 +3968,13 @@ real_t s4115(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return sum;
 }
+#endif
+
 
 // %4.11
 
 //int s4116(int* __restrict__ ip, int j, int inc)
+#if defined(S4116) || defined(ALL_KERNEL)
 real_t s4116(struct args_t * func_args)
 {
 
@@ -3574,9 +4004,12 @@ real_t s4116(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return sum;
 }
+#endif
+
 
 // %4.11
 
+#if defined(S4117) || defined(ALL_KERNEL)
 real_t s4117(struct args_t * func_args)
 {
 
@@ -3596,6 +4029,8 @@ real_t s4117(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %4.12
 
@@ -3603,6 +4038,7 @@ real_t f(real_t a, real_t b){
     return a*b;
 }
 
+#if defined(S4121) || defined(ALL_KERNEL)
 real_t s4121(struct args_t * func_args)
 {
 
@@ -3622,9 +4058,12 @@ real_t s4121(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %5.1
 
+#if defined(VA) || defined(ALL_KERNEL)
 real_t va(struct args_t * func_args)
 {
 
@@ -3644,10 +4083,13 @@ real_t va(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %5.1
 
 //int vag( int* __restrict__ ip)
+#if defined(VAG) || defined(ALL_KERNEL)
 real_t vag(struct args_t * func_args)
 {
 
@@ -3670,10 +4112,13 @@ real_t vag(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %5.1
 
 //int vas( int* __restrict__ ip)
+#if defined(VAS) || defined(ALL_KERNEL)
 real_t vas(struct args_t * func_args)
 {
 
@@ -3696,9 +4141,12 @@ real_t vas(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %5.1
 
+#if defined(VIF) || defined(ALL_KERNEL)
 real_t vif(struct args_t * func_args)
 {
 
@@ -3720,9 +4168,12 @@ real_t vif(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %5.1
 
+#if defined(VPV) || defined(ALL_KERNEL)
 real_t vpv(struct args_t * func_args)
 {
 
@@ -3742,9 +4193,12 @@ real_t vpv(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %5.1
 
+#if defined(VTV) || defined(ALL_KERNEL)
 real_t vtv(struct args_t * func_args)
 {
 
@@ -3764,9 +4218,12 @@ real_t vtv(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %5.1
 
+#if defined(VPVTV) || defined(ALL_KERNEL)
 real_t vpvtv(struct args_t * func_args)
 {
 
@@ -3786,10 +4243,13 @@ real_t vpvtv(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %5.1
 
 //real_t vpvts( real_t s)
+#if defined(VPVTS) || defined(ALL_KERNEL)
 real_t vpvts(struct args_t * func_args)
 {
 
@@ -3811,9 +4271,12 @@ real_t vpvts(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %5.1
 
+#if defined(VPVPV) || defined(ALL_KERNEL)
 real_t vpvpv(struct args_t * func_args)
 {
 
@@ -3833,9 +4296,12 @@ real_t vpvpv(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %5.1
 
+#if defined(VTVTV) || defined(ALL_KERNEL)
 real_t vtvtv(struct args_t * func_args)
 {
 
@@ -3855,9 +4321,12 @@ real_t vtvtv(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
 
 // %5.1
 
+#if defined(VSUMR) || defined(ALL_KERNEL)
 real_t vsumr(struct args_t * func_args)
 {
 
@@ -3879,9 +4348,12 @@ real_t vsumr(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return sum;
 }
+#endif
+
 
 // %5.1
 
+#if defined(VDOTR) || defined(ALL_KERNEL)
 real_t vdotr(struct args_t * func_args)
 {
 
@@ -3903,9 +4375,12 @@ real_t vdotr(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return dot;
 }
+#endif
+
 
 // %5.1
 
+#if defined(VBOR) || defined(ALL_KERNEL)
 real_t vbor(struct args_t * func_args)
 {
 
@@ -3940,6 +4415,10 @@ real_t vbor(struct args_t * func_args)
     gettimeofday(&func_args->t2, NULL);
     return calc_checksum(__func__);
 }
+#endif
+
+
+
 
 typedef real_t(*test_function_t)(struct args_t *);
 
@@ -3965,157 +4444,609 @@ int main(int argc, char ** argv){
     init(&ip, &s1, &s2);
     printf("Loop \tTime(sec) \tChecksum\n");
 
+    #if defined(S000) || defined(ALL_KERNEL)
     time_function(&s000, NULL);
+    #endif
+
+    #if defined(S111) || defined(ALL_KERNEL)
     time_function(&s111, NULL);
+    #endif
+
+    #if defined(S1111) || defined(ALL_KERNEL)
     time_function(&s1111, NULL);
+    #endif
+
+    #if defined(S112) || defined(ALL_KERNEL)
     time_function(&s112, NULL);
+    #endif
+
+    #if defined(S1112) || defined(ALL_KERNEL)
     time_function(&s1112, NULL);
+    #endif
+
+    #if defined(S113) || defined(ALL_KERNEL)
     time_function(&s113, NULL);
+    #endif
+
+    #if defined(S1113) || defined(ALL_KERNEL)
     time_function(&s1113, NULL);
+    #endif
+
+    #if defined(S114) || defined(ALL_KERNEL)
     time_function(&s114, NULL);
+    #endif
+
+    #if defined(S115) || defined(ALL_KERNEL)
     time_function(&s115, NULL);
+    #endif
+
+    #if defined(S1115) || defined(ALL_KERNEL)
     time_function(&s1115, NULL);
+    #endif
+
+    #if defined(S116) || defined(ALL_KERNEL)
     time_function(&s116, NULL);
+    #endif
+
+    #if defined(S118) || defined(ALL_KERNEL)
     time_function(&s118, NULL);
+    #endif
+
+    #if defined(S119) || defined(ALL_KERNEL)
     time_function(&s119, NULL);
+    #endif
+
+    #if defined(S1119) || defined(ALL_KERNEL)
     time_function(&s1119, NULL);
+    #endif
+
+    #if defined(S121) || defined(ALL_KERNEL)
     time_function(&s121, NULL);
+    #endif
+
+    #if defined(S122) || defined(ALL_KERNEL)
     time_function(&s122, &(struct{int a;int b;}){n1, n3});
+    #endif
+
+    #if defined(S123) || defined(ALL_KERNEL)
     time_function(&s123, NULL);
+    #endif
+
+    #if defined(S124) || defined(ALL_KERNEL)
     time_function(&s124, NULL);
+    #endif
+
+    #if defined(S125) || defined(ALL_KERNEL)
     time_function(&s125, NULL);
+    #endif
+
+    #if defined(S126) || defined(ALL_KERNEL)
     time_function(&s126, NULL);
+    #endif
+
+    #if defined(S127) || defined(ALL_KERNEL)
     time_function(&s127, NULL);
+    #endif
+
+    #if defined(S128) || defined(ALL_KERNEL)
     time_function(&s128, NULL);
+    #endif
+
+    #if defined(S131) || defined(ALL_KERNEL)
     time_function(&s131, NULL);
+    #endif
+
+    #if defined(S132) || defined(ALL_KERNEL)
     time_function(&s132, NULL);
+    #endif
+
+    #if defined(S141) || defined(ALL_KERNEL)
     time_function(&s141, NULL);
+    #endif
+
+    #if defined(S151) || defined(ALL_KERNEL)
     time_function(&s151, NULL);
+    #endif
+
+    #if defined(S152) || defined(ALL_KERNEL)
     time_function(&s152, NULL);
+    #endif
+
+    #if defined(S161) || defined(ALL_KERNEL)
     time_function(&s161, NULL);
+    #endif
+
+    #if defined(S1161) || defined(ALL_KERNEL)
     time_function(&s1161, NULL);
+    #endif
+
+    #if defined(S162) || defined(ALL_KERNEL)
     time_function(&s162, &n1);
+    #endif
+
+    #if defined(S171) || defined(ALL_KERNEL)
     time_function(&s171, &n1);
+    #endif
+
+    #if defined(S172) || defined(ALL_KERNEL)
     time_function(&s172, &(struct{int a;int b;}){n1, n3});
+    #endif
+
+    #if defined(S173) || defined(ALL_KERNEL)
     time_function(&s173, NULL);
+    #endif
+
+    #if defined(S174) || defined(ALL_KERNEL)
     time_function(&s174, &(struct{int a;}){LEN_1D/2});
+    #endif
+
+    #if defined(S175) || defined(ALL_KERNEL)
     time_function(&s175, &n1);
+    #endif
+
+    #if defined(S176) || defined(ALL_KERNEL)
     time_function(&s176, NULL);
+    #endif
+
+    #if defined(S211) || defined(ALL_KERNEL)
     time_function(&s211, NULL);
+    #endif
+
+    #if defined(S212) || defined(ALL_KERNEL)
     time_function(&s212, NULL);
+    #endif
+
+    #if defined(S1213) || defined(ALL_KERNEL)
     time_function(&s1213, NULL);
+    #endif
+
+    #if defined(S221) || defined(ALL_KERNEL)
     time_function(&s221, NULL);
+    #endif
+
+    #if defined(S1221) || defined(ALL_KERNEL)
     time_function(&s1221, NULL);
+    #endif
+
+    #if defined(S222) || defined(ALL_KERNEL)
     time_function(&s222, NULL);
+    #endif
+
+    #if defined(S231) || defined(ALL_KERNEL)
     time_function(&s231, NULL);
+    #endif
+
+    #if defined(S232) || defined(ALL_KERNEL)
     time_function(&s232, NULL);
+    #endif
+
+    #if defined(S1232) || defined(ALL_KERNEL)
     time_function(&s1232, NULL);
+    #endif
+
+    #if defined(S233) || defined(ALL_KERNEL)
     time_function(&s233, NULL);
+    #endif
+
+    #if defined(S2233) || defined(ALL_KERNEL)
     time_function(&s2233, NULL);
+    #endif
+
+    #if defined(S235) || defined(ALL_KERNEL)
     time_function(&s235, NULL);
+    #endif
+
+    #if defined(S241) || defined(ALL_KERNEL)
     time_function(&s241, NULL);
+    #endif
+
+    #if defined(S242) || defined(ALL_KERNEL)
     time_function(&s242, &(struct{real_t a;real_t b;}){s1, s2});
+    #endif
+
+    #if defined(S243) || defined(ALL_KERNEL)
     time_function(&s243, NULL);
+    #endif
+
+    #if defined(S244) || defined(ALL_KERNEL)
     time_function(&s244, NULL);
+    #endif
+
+    #if defined(S1244) || defined(ALL_KERNEL)
     time_function(&s1244, NULL);
+    #endif
+
+    #if defined(S2244) || defined(ALL_KERNEL)
     time_function(&s2244, NULL);
+    #endif
+
+    #if defined(S251) || defined(ALL_KERNEL)
     time_function(&s251, NULL);
+    #endif
+
+    #if defined(S1251) || defined(ALL_KERNEL)
     time_function(&s1251, NULL);
+    #endif
+
+    #if defined(S2251) || defined(ALL_KERNEL)
     time_function(&s2251, NULL);
+    #endif
+
+    #if defined(S3251) || defined(ALL_KERNEL)
     time_function(&s3251, NULL);
+    #endif
+
+    #if defined(S252) || defined(ALL_KERNEL)
     time_function(&s252, NULL);
+    #endif
+
+    #if defined(S253) || defined(ALL_KERNEL)
     time_function(&s253, NULL);
+    #endif
+
+    #if defined(S254) || defined(ALL_KERNEL)
     time_function(&s254, NULL);
+    #endif
+
+    #if defined(S255) || defined(ALL_KERNEL)
     time_function(&s255, NULL);
+    #endif
+
+    #if defined(S256) || defined(ALL_KERNEL)
     time_function(&s256, NULL);
+    #endif
+
+    #if defined(S257) || defined(ALL_KERNEL)
     time_function(&s257, NULL);
+    #endif
+
+    #if defined(S258) || defined(ALL_KERNEL)
     time_function(&s258, NULL);
+    #endif
+
+    #if defined(S261) || defined(ALL_KERNEL)
     time_function(&s261, NULL);
+    #endif
+
+    #if defined(S271) || defined(ALL_KERNEL)
     time_function(&s271, NULL);
+    #endif
+
+    #if defined(S272) || defined(ALL_KERNEL)
     time_function(&s272, &s1);
+    #endif
+
+    #if defined(S273) || defined(ALL_KERNEL)
     time_function(&s273, NULL);
+    #endif
+
+    #if defined(S274) || defined(ALL_KERNEL)
     time_function(&s274, NULL);
+    #endif
+
+    #if defined(S275) || defined(ALL_KERNEL)
     time_function(&s275, NULL);
+    #endif
+
+    #if defined(S2275) || defined(ALL_KERNEL)
     time_function(&s2275, NULL);
+    #endif
+
+    #if defined(S276) || defined(ALL_KERNEL)
     time_function(&s276, NULL);
+    #endif
+
+    #if defined(S277) || defined(ALL_KERNEL)
     time_function(&s277, NULL);
+    #endif
+
+    #if defined(S278) || defined(ALL_KERNEL)
     time_function(&s278, NULL);
+    #endif
+
+    #if defined(S279) || defined(ALL_KERNEL)
     time_function(&s279, NULL);
+    #endif
+
+    #if defined(S1279) || defined(ALL_KERNEL)
     time_function(&s1279, NULL);
+    #endif
+
+    #if defined(S2710) || defined(ALL_KERNEL)
     time_function(&s2710, &s1);
+    #endif
+
+    #if defined(S2711) || defined(ALL_KERNEL)
     time_function(&s2711, NULL);
+    #endif
+
+    #if defined(S2712) || defined(ALL_KERNEL)
     time_function(&s2712, NULL);
+    #endif
+
+    #if defined(S281) || defined(ALL_KERNEL)
     time_function(&s281, NULL);
+    #endif
+
+    #if defined(S1281) || defined(ALL_KERNEL)
     time_function(&s1281, NULL);
+    #endif
+
+    #if defined(S291) || defined(ALL_KERNEL)
     time_function(&s291, NULL);
+    #endif
+
+    #if defined(S292) || defined(ALL_KERNEL)
     time_function(&s292, NULL);
+    #endif
+
+    #if defined(S293) || defined(ALL_KERNEL)
     time_function(&s293, NULL);
+    #endif
+
+    #if defined(S2101) || defined(ALL_KERNEL)
     time_function(&s2101, NULL);
+    #endif
+
+    #if defined(S2102) || defined(ALL_KERNEL)
     time_function(&s2102, NULL);
+    #endif
+
+    #if defined(S2111) || defined(ALL_KERNEL)
     time_function(&s2111, NULL);
+    #endif
+
+    #if defined(S311) || defined(ALL_KERNEL)
     time_function(&s311, NULL);
+    #endif
+
+    #if defined(S31111) || defined(ALL_KERNEL)
     time_function(&s31111, NULL);
+    #endif
+
+    #if defined(S312) || defined(ALL_KERNEL)
     time_function(&s312, NULL);
+    #endif
+
+    #if defined(S313) || defined(ALL_KERNEL)
     time_function(&s313, NULL);
+    #endif
+
+    #if defined(S314) || defined(ALL_KERNEL)
     time_function(&s314, NULL);
+    #endif
+
+    #if defined(S315) || defined(ALL_KERNEL)
     time_function(&s315, NULL);
+    #endif
+
+    #if defined(S316) || defined(ALL_KERNEL)
     time_function(&s316, NULL);
+    #endif
+
+    #if defined(S317) || defined(ALL_KERNEL)
     time_function(&s317, NULL);
+    #endif
+
+    #if defined(S318) || defined(ALL_KERNEL)
     time_function(&s318, &n1);
+    #endif
+
+    #if defined(S319) || defined(ALL_KERNEL)
     time_function(&s319, NULL);
+    #endif
+
+    #if defined(S3110) || defined(ALL_KERNEL)
     time_function(&s3110, NULL);
+    #endif
+
+    #if defined(S13110) || defined(ALL_KERNEL)
     time_function(&s13110, NULL);
+    #endif
+
+    #if defined(S3111) || defined(ALL_KERNEL)
     time_function(&s3111, NULL);
+    #endif
+
+    #if defined(S3112) || defined(ALL_KERNEL)
     time_function(&s3112, NULL);
+    #endif
+
+    #if defined(S3113) || defined(ALL_KERNEL)
     time_function(&s3113, NULL);
+    #endif
+
+    #if defined(S321) || defined(ALL_KERNEL)
     time_function(&s321, NULL);
+    #endif
+
+    #if defined(S322) || defined(ALL_KERNEL)
     time_function(&s322, NULL);
+    #endif
+
+    #if defined(S323) || defined(ALL_KERNEL)
     time_function(&s323, NULL);
+    #endif
+
+    #if defined(S331) || defined(ALL_KERNEL)
     time_function(&s331, NULL);
+    #endif
+
+    #if defined(S332) || defined(ALL_KERNEL)
     time_function(&s332, &s1);
+    #endif
+
+    #if defined(S341) || defined(ALL_KERNEL)
     time_function(&s341, NULL);
+    #endif
+
+    #if defined(S342) || defined(ALL_KERNEL)
     time_function(&s342, NULL);
+    #endif
+
+    #if defined(S343) || defined(ALL_KERNEL)
     time_function(&s343, NULL);
+    #endif
+
+    #if defined(S351) || defined(ALL_KERNEL)
     time_function(&s351, NULL);
+    #endif
+
+    #if defined(S1351) || defined(ALL_KERNEL)
     time_function(&s1351, NULL);
+    #endif
+
+    #if defined(S352) || defined(ALL_KERNEL)
     time_function(&s352, NULL);
+    #endif
+
+    #if defined(S353) || defined(ALL_KERNEL)
     time_function(&s353, ip);
+    #endif
+
+    #if defined(S421) || defined(ALL_KERNEL)
     time_function(&s421, NULL);
+    #endif
+
+    #if defined(S1421) || defined(ALL_KERNEL)
     time_function(&s1421, NULL);
+    #endif
+
+    #if defined(S422) || defined(ALL_KERNEL)
     time_function(&s422, NULL);
+    #endif
+
+    #if defined(S423) || defined(ALL_KERNEL)
     time_function(&s423, NULL);
+    #endif
+
+    #if defined(S424) || defined(ALL_KERNEL)
     time_function(&s424, NULL);
+    #endif
+
+    #if defined(S431) || defined(ALL_KERNEL)
     time_function(&s431, NULL);
+    #endif
+
+    #if defined(S441) || defined(ALL_KERNEL)
     time_function(&s441, NULL);
+    #endif
+
+    #if defined(S442) || defined(ALL_KERNEL)
     time_function(&s442, NULL);
+    #endif
+
+    #if defined(S443) || defined(ALL_KERNEL)
     time_function(&s443, NULL);
+    #endif
+
+    #if defined(S451) || defined(ALL_KERNEL)
     time_function(&s451, NULL);
+    #endif
+
+    #if defined(S452) || defined(ALL_KERNEL)
     time_function(&s452, NULL);
+    #endif
+
+    #if defined(S453) || defined(ALL_KERNEL)
     time_function(&s453, NULL);
+    #endif
+
+    #if defined(S471) || defined(ALL_KERNEL)
     time_function(&s471, NULL);
+    #endif
+
+    #if defined(S481) || defined(ALL_KERNEL)
     time_function(&s481, NULL);
+    #endif
+
+    #if defined(S482) || defined(ALL_KERNEL)
     time_function(&s482, NULL);
+    #endif
+
+    #if defined(S491) || defined(ALL_KERNEL)
     time_function(&s491, ip);
+    #endif
+
+    #if defined(S4112) || defined(ALL_KERNEL)
     time_function(&s4112, &(struct{int*a;real_t b;}){ip, s1});
+    #endif
+
+    #if defined(S4113) || defined(ALL_KERNEL)
     time_function(&s4113, ip);
+    #endif
+
+    #if defined(S4114) || defined(ALL_KERNEL)
     time_function(&s4114, &(struct{int*a;int b;}){ip, n1});
+    #endif
+
+    #if defined(S4115) || defined(ALL_KERNEL)
     time_function(&s4115, ip);
+    #endif
+
+    #if defined(S4116) || defined(ALL_KERNEL)
     time_function(&s4116, &(struct{int * a; int b; int c;}){ip, LEN_2D/2, n1});
+    #endif
+
+    #if defined(S4117) || defined(ALL_KERNEL)
     time_function(&s4117, NULL);
+    #endif
+
+    #if defined(S4121) || defined(ALL_KERNEL)
     time_function(&s4121, NULL);
+    #endif
+
+    #if defined(VA) || defined(ALL_KERNEL)
     time_function(&va, NULL);
+    #endif
+
+    #if defined(VAG) || defined(ALL_KERNEL)
     time_function(&vag, ip);
+    #endif
+
+    #if defined(VAS) || defined(ALL_KERNEL)
     time_function(&vas, ip);
+    #endif
+
+    #if defined(VIF) || defined(ALL_KERNEL)
     time_function(&vif, NULL);
+    #endif
+
+    #if defined(VPV) || defined(ALL_KERNEL)
     time_function(&vpv, NULL);
+    #endif
+
+    #if defined(VTV) || defined(ALL_KERNEL)
     time_function(&vtv, NULL);
+    #endif
+
+    #if defined(VPVTV) || defined(ALL_KERNEL)
     time_function(&vpvtv, NULL);
+    #endif
+
+    #if defined(VPVTS) || defined(ALL_KERNEL)
     time_function(&vpvts, &s1);
+    #endif
+
+    #if defined(VPVPV) || defined(ALL_KERNEL)
     time_function(&vpvpv, NULL);
+    #endif
+
+    #if defined(VTVTV) || defined(ALL_KERNEL)
     time_function(&vtvtv, NULL);
+    #endif
+
+    #if defined(VSUMR) || defined(ALL_KERNEL)
     time_function(&vsumr, NULL);
+    #endif
+
+    #if defined(VDOTR) || defined(ALL_KERNEL)
     time_function(&vdotr, NULL);
+    #endif
+
+    #if defined(VBOR) || defined(ALL_KERNEL)
     time_function(&vbor, NULL);
+    #endif
 
     return EXIT_SUCCESS;
 }
