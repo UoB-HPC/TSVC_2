@@ -6,7 +6,7 @@ flags = -O3
 ARCH_FLAGS ?= -march=native -mtune=native
 warnflags = -Wall -Wextra
 vecflags = -vec
-novecflags = -no-vec
+novecflags = -no-vec -fno-slp-vectorize
 omp_flags+=-fopenmp
 
 ifdef VEC_REPORT

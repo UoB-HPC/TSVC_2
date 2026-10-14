@@ -6,7 +6,7 @@ FC=
 flags = -O3 -fstrict-aliasing
 warnflags = -Wall -Wextra
 vecflags = -fvectorize -fslp-vectorize
-novecflags = -fno-vectorize
+novecflags = -fno-vectorize -fno-slp-vectorize
 omp_flags=-fopenmp=libomp
 
 ifeq ($(shell uname -m),aarch64)
