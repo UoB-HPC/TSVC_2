@@ -3,6 +3,7 @@ CC=icc -restrict -std=c99
 CXX=icpc -restrict
 FC=ifort -align array64byte
 flags = -O3 -ip
+ARCH_FLAGS ?= -xHost
 vecflags = -vec
 novecflags = -no-vec
 omp_flags+=-fopenmp

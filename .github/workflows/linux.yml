@@ -1,0 +1,58 @@
+name: Linux
+
+on: [push, pull_request, workflow_dispatch]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: ${{ matrix.variant }}
+    strategy:
+      fail-fast: false
+      max-parallel: 32
+      matrix:
+        # prettier-ignore
+        variant: [
+          gcc-9, gcc-10, gcc-11, gcc-12, gcc-13, gcc-14, gcc-15,
+
+          clang-11, clang-12, clang-13, clang-14, clang-15, clang-16,
+          clang-17, clang-18, clang-19, clang-20, clang-21,
+
+          oneapi,
+
+          nvhpc,
+        ]
+        # prettier-ignore
+        include:
+          - {variant: "gcc-9", compiler: "gcc", toolchain: &gcc_9 {image: "docker.io/library/ubuntu:22.04", cc: "gcc-9 -std=c99", cxx: "g++-9", packages: "g++-9"}}
+          - {variant: "gcc-10", compiler: "gcc", toolchain: &gcc_10 {image: "docker.io/library/ubuntu:22.04", cc: "gcc-10 -std=c99", cxx: "g++-10", packages: "g++-10"}}
+          - {variant: "gcc-11", compiler: "gcc", toolchain: &gcc_11 {image: "docker.io/library/ubuntu:22.04", cc: "gcc-11 -std=c99", cxx: "g++-11", packages: "g++-11"}}
+          - {variant: "gcc-12", compiler: "gcc", toolchain: &gcc_12 {image: "docker.io/library/ubuntu:22.04", cc: "gcc-12 -std=c99", cxx: "g++-12", packages: "g++-12"}}
+          - {variant: "gcc-13", compiler: "gcc", toolchain: &gcc_13 {image: "docker.io/library/ubuntu:24.04", cc: "gcc-13 -std=c99", cxx: "g++-13", packages: "g++-13"}}
+          - {variant: "gcc-14", compiler: "gcc", toolchain: &gcc_14 {image: "docker.io/library/ubuntu:24.04", cc: "gcc-14 -std=c99", cxx: "g++-14", packages: "g++-14"}}
+          - {variant: "gcc-15", compiler: "gcc", toolchain: &gcc_15 {image: "docker.io/library/ubuntu:24.04", cc: "gcc-15 -std=c99", cxx: "g++-15", packages: "g++-15",
+              apt_key: "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xC8EC952E2A0E1FBDC5090F6A2C277A0A352154E5",
+              apt_source: "https://ppa.launchpadcontent.net/ubuntu-toolchain-r/test/ubuntu noble main"}}
+
+          - {variant: "clang-11", compiler: "clang", toolchain: &clang_11 {image: "docker.io/library/ubuntu:22.04", cc: "clang-11", cxx: "clang++-11", packages: "clang-11"}}
+          - {variant: "clang-12", compiler: "clang", toolchain: &clang_12 {image: "docker.io/library/ubuntu:22.04", cc: "clang-12", cxx: "clang++-12", packages: "clang-12"}}
+          - {variant: "clang-13", compiler: "clang", toolchain: &clang_13 {image: "docker.io/library/ubuntu:22.04", cc: "clang-13", cxx: "clang++-13", packages: "clang-13"}}
+          - {variant: "clang-14", compiler: "clang", toolchain: &clang_14 {image: "docker.io/library/ubuntu:22.04", cc: "clang-14", cxx: "clang++-14", packages: "clang-14"}}
+          - {variant: "clang-15", compiler: "clang", toolchain: &clang_15 {image: "docker.io/library/ubuntu:22.04", cc: "clang-15", cxx: "clang++-15", packages: "clang-15"}}
+          - {variant: "clang-16", compiler: "clang", toolchain: &clang_16 {image: "docker.io/library/ubuntu:24.04", cc: "clang-16", cxx: "clang++-16", packages: "clang-16"}}
+          - {variant: "clang-17", compiler: "clang", toolchain: &clang_17 {image: "docker.io/library/ubuntu:24.04", cc: "clang-17", cxx: "clang++-17", packages: "clang-17"}}
+          - {variant: "clang-18", compiler: "clang", toolchain: &clang_18 {image: "docker.io/library/ubuntu:24.04", cc: "clang-18", cxx: "clang++-18", packages: "clang-18"}}
+          - {variant: "clang-19", compiler: "clang", toolchain: &clang_19 {image: "docker.io/library/ubuntu:26.04", cc: "clang-19", cxx: "clang++-19", packages: "clang-19 libstdc++-16-dev"}}
+          - {variant: "clang-20", compiler: "clang", toolchain: &clang_20 {image: "docker.io/library/ubuntu:26.04", cc: "clang-20", cxx: "clang++-20", packages: "clang-20 libstdc++-16-dev"}}
+          - {variant: "clang-21", compiler: "clang", toolchain: &clang_21 {image: "docker.io/library/ubuntu:26.04", cc: "clang-21", cxx: "clang++-21", packages: "clang-21 libstdc++-16-dev"}}
+
+          - {variant: "oneapi", compiler: "icx", toolchain: &oneapi {architectures: [x86_64], image: "docker.io/library/ubuntu:24.04", cc: "/opt/intel/oneapi/compiler/2025.3/bin/icx -std=c99",
+              cxx: "/opt/intel/oneapi/compiler/2025.3/bin/icpx", packages: "intel-oneapi-dpcpp-cpp-2025.3",
+              apt_key: "https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB", apt_source: "https://apt.repos.intel.com/oneapi all main",
+              env_script: "/opt/intel/oneapi/setvars.sh"}}
+
+          - {variant: "nvhpc", compiler: "nvc", toolchain: &nvhpc {image: "nvcr.io/nvidia/nvhpc:26.5-devel-cuda13.2-ubuntu24.04", cc: "nvc -Msafeptr", cxx: "nvc++ -Msafeptr", cleanup_disk: true}}
+    uses: ./.github/workflows/build.yml
+    with:
+      configuration: ${{ toJSON(matrix) }}

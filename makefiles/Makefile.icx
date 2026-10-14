@@ -1,0 +1,17 @@
+
+CC=icx -std=c99
+CXX=icpx
+FC=ifx
+flags = -O3
+ARCH_FLAGS ?= -march=native -mtune=native
+warnflags = -Wall -Wextra
+vecflags = -vec
+novecflags = -no-vec
+omp_flags+=-fopenmp
+
+ifdef VEC_REPORT
+vecflags+=-qopt-report=max -qopt-report-phase=vec
+endif
+
+ieee_math_flags+=-fp-model precise
+fast_math_flags+=-fp-model fast=2

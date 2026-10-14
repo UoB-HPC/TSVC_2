@@ -1,5 +1,5 @@
 
-COMPILER=GNU
+COMPILER=gcc
 
 ifndef COMPILER
 $(error No compiler specified!)

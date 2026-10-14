@@ -3957,7 +3957,7 @@ void time_function(test_function_t vector_func, void * arg_info)
     printf("%10.3f\t%f\n", taken, result);
 }
 
-int main(int argc, char ** argv){
+int main(void){
     int n1 = 1;
     int n3 = 1;
     int* ip;

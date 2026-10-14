@@ -2,6 +2,9 @@
 *.s
 *.lst
 *.optrpt
+*.vect
 *.cg
 *.opt
 bin/
+build/
+.idea/

@@ -1,0 +1,25 @@
+
+CC=nvc -Msafeptr
+CXX=nvc++ -Msafeptr
+FC=nvfortran
+flags = -fast -O3
+ARCH_FLAGS ?= -tp=native
+warnflags = -Wall
+vecflags = -Mvect
+novecflags = -Mnovect
+omp_flags=-mp=nonuma
+
+ifdef VEC_REPORT
+vecflags+=-Minfo=vect
+endif
+
+ieee_math_flags+=-Kieee
+fast_math_flags+=-Knoieee -Mfprelaxed
+
+ifdef PRECISE_MATH
+$(warning NVHPC will not obey IEEE flags if vectorisation is also enabled!)
+endif
+
+ifdef NO_OMP
+flags+=-Mnoopenmp
+endif

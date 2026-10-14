@@ -20,9 +20,9 @@ $(BIN_DIR)/tsvc_% : tsvc_%.o $(COMMON_FILES)
 	$(CC) $(flags) $(vecflags) -c -o $@ $<
 
 # Compiled with IEEE math flags to make initialisation/checksum calculations more reproducable
-# Be wary that PGI doesn't respect IEEE properly with vectorisation
+# Be wary that NVHPC doesn't respect IEEE properly with vectorisation
 %.o:%.c .FORCE
-	$(CC) $(flags) $(vecflags) $(ieee_math_flags) -c -o $@ $<
+	$(CC) $(helper_flags) $(vecflags) $(ieee_math_flags) -c -o $@ $<
 
 .PHONY: .FORCE clean
 .FORCE:

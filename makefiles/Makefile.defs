@@ -5,6 +5,9 @@ endif
 
 include $(shell dirname $(abspath $(lastword $(MAKEFILE_LIST))))/Makefile.$(COMPILER)
 
+flags+=$(ARCH_FLAGS)
+flags+=$(warnflags)
+
 ifndef NO_OMP
 flags+=$(omp_flags)
 endif
@@ -14,4 +17,7 @@ flags+=$(ieee_math_flags)
 else ifdef FAST_MATH
 flags+=$(fast_math_flags)
 endif
+
+# helper objects always get the ieee flags, so their flags must not carry fast-math
+helper_flags = $(if $(ieee_math_flags),$(filter-out $(fast_math_flags) $(ieee_math_flags),$(flags)),$(flags))
 
