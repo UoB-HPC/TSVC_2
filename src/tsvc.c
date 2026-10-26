@@ -3941,6 +3941,30 @@ real_t vbor(struct args_t * func_args)
     return calc_checksum(__func__);
 }
 
+// New: goto-loop with code on both sides of increment
+real_t s497(struct args_t * func_args)
+{
+
+    initialise_arrays(__func__);
+    gettimeofday(&func_args->t1, NULL);
+
+    for (int nl = 0; nl < 2*iterations; nl++) {
+        int i = 0;
+L497_10:
+        if (i >= LEN_1D - 1) goto L497_20;
+            b[i] = b[i] + d[i] * e[i];
+            i    = i + 1;
+            a[i] = c[i] + d[i] * e[i];
+        goto L497_10;
+L497_20:
+        ;
+        dummy(a, b, c, d, e, aa, bb, cc, 0.);
+    }
+
+    gettimeofday(&func_args->t2, NULL);
+    return calc_checksum(__func__);
+}
+
 typedef real_t(*test_function_t)(struct args_t *);
 
 void time_function(test_function_t vector_func, void * arg_info)
@@ -4116,6 +4140,7 @@ int main(void){
     time_function(&vsumr, NULL);
     time_function(&vdotr, NULL);
     time_function(&vbor, NULL);
+    time_function(&s497, NULL);
 
     return EXIT_SUCCESS;
 }

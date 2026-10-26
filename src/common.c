@@ -762,6 +762,12 @@ int initialise_arrays(const char* name)
         set_1d_array(d, LEN_1D, two,frac);
         set_1d_array(e, LEN_1D,half,frac);
         set_2d_array(aa, any,frac);
+    } else if (!strcmp(name, "s497")) {
+        set_1d_array(a, LEN_1D,zero,unit);
+        set_1d_array(b, LEN_1D, one,unit);
+        set_1d_array(c, LEN_1D, any,frac);
+        set_1d_array(d, LEN_1D, any,frac);
+        set_1d_array(e, LEN_1D, any,frac);
     } else {
     }
 
@@ -1034,6 +1040,8 @@ real_t calc_checksum(const char * name)
         return sum_a();
     } else if (!strcmp(name, "vbor")) {
         return sum_x();
+    } else if (!strcmp(name, "s497")) {
+        return sum_a() + sum_b();
     } else {
         fprintf(stderr, "Unknown function name passed to calc_checksum: %s\n", name);
         exit(1);
