@@ -1,5 +1,7 @@
 
 include ../makefiles/Makefile.defs
+# Defines the list of tests
+include loops.mk
 
 COMMON_FILES=dummy.o common.o
 
@@ -9,15 +11,15 @@ libs=-lm
 
 all : $(BIN_DIR)/tsvc_vec $(BIN_DIR)/tsvc_novec
 
-$(BIN_DIR)/tsvc_% : tsvc_%.o $(COMMON_FILES)
+$(BIN_DIR)/tsvc_% : tsvc_%.o $(foreach t,$(TESTS), loops/$(t)_%.o) $(COMMON_FILES)
 	@mkdir -p $(BIN_DIR)
 	$(CC) $^ $(libs) -o $@$(SUFFIX)
 
 %_novec.o:%.c .FORCE
-	$(CC) $(flags) $(novecflags) -c -o $@ $<
+	$(CC) -I . $(flags) $(novecflags) -c -o $@ $<
 
 %_vec.o:%.c .FORCE
-	$(CC) $(flags) $(vecflags) -c -o $@ $<
+	$(CC) -I . $(flags) $(vecflags) -c -o $@ $<
 
 # Compiled with IEEE math flags to make initialisation/checksum calculations more reproducable
 # Be wary that NVHPC doesn't respect IEEE properly with vectorisation
@@ -29,5 +31,5 @@ $(BIN_DIR)/tsvc_% : tsvc_%.o $(COMMON_FILES)
 	@true
 
 clean :
-	rm -f *.o *.s
+	$(RM) -f *.o src/*.o *.s
 
